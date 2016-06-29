@@ -6,24 +6,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Developer, Programmer, Engineer, Software development, development, web, web development">
+    <meta name="author" content="Ólafur Aron Jóhannsson, olafurj, Ólafur Jóhannsson, olafur@johannsson.co, olafurjohannsson">
 
     <title>olafurjohannsson.com</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+    rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/animate.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="static/css/creative.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,19 +37,27 @@
         * {
             font-family: 'Open Sans', sans-serif;
         }
+        
         .title {
             color: rgba(255, 255, 255, 0.7);
         }
+        
         .portfolio-box img {
             height: 274px;
             width: 100%;
         }
+        
         .emphasize {
-            color:#f05f40
+            color: #f05f40;
+            font-size: 44px;
+        }
+        
+        .main-content {
+            min-height: 100%;
         }
     </style>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
@@ -55,7 +65,7 @@
   ga('create', 'UA-77733773-2', 'auto');
   ga('send', 'pageview');
 
-</script>
+    </script>
 </head>
 
 <body id="page-top">
@@ -98,29 +108,49 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h2><span class="emphasize">Hi, </span> i'm Ólafur </h2>
+                <h2><span class="emphasize">Hi,<br> </span> I'm Ólafur Aron</h2>
                 <hr>
                 <h3 class="title">Developer</h3>
             </div>
         </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-primary main-content" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">I am</h2>
                     <hr class="light">
-                    <p class="text-faded">Father of two boys, developer, marathon runner, musician, lego player, advanced ping pong player. </p>
+                    <p class="text-faded">27 years old developer, programming in a professional environment since 2011</p>
+                    
+<p class="text-faded">Father of two boys, interested in marathon running, exercising, playing guitar, music theory, software development, design, books and video games.</p>
 
-                    <p class="text-faded">And some other stuff too...</p>
-                    <a href="/cv.pdf" class="btn btn-default btn-xl">Download CV</a>
+                    <p>
+                        <a href="static/cv.pdf" class="btn btn-default btn-xl">
+                            <i style="color: #000;" class="fa fa-file wow bounceIn text-primary"> <small>CV</small></i>
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="https://github.com/olafurjohannsson" class="btn btn-default btn-xl">
+                            <i style="color: #000;" class="fa fa-github wow bounceIn text-primary"> <small>GitHub</small></i>
+                        </a>
+                    </p>
+                    
+                    <p>
+                        <a href="https://bitbucket.org/olafurjoh/" class="btn btn-default btn-xl">
+                            <i style="color: #000;" class="fa fa-bitbucket wow bounceIn text-primary"> <small>Bitbucket</small></i>
+                        </a>
+                    </p>
+                    
+                    
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section id="services">
+    <section id="services" class="main-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -136,7 +166,9 @@
                         <i class="fa fa-4x fa-code wow bounceIn text-primary"></i>
                         <h3>Development</h3>
                         <p class="text-muted">
-                            Whether it's PHP, NodeJS, .NET, SQL, JavaScript, WordPress, C++, Go or anything in between i can create software using any tool appropriate.
+                            My specialty is 
+                            Whether it's PHP, NodeJS, .NET, SQL, JavaScript, WordPress, C++, Go or anything in between i can create software using any
+                            tool appropriate.
                         </p>
                     </div>
                 </div>
@@ -171,7 +203,7 @@
         </div>
     </section>
 
-    <section id="portfolio" style="padding-bottom:0;" class="bg-dark">
+    <section id="portfolio" style="padding-bottom:0;" class="bg-dark" class="main-content">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -184,8 +216,8 @@
         <div class="container-fluid" style="padding-top: 80px;">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
-                    <a href="http://quickinvoice.is" class="portfolio-box">
-                        <img src="img/portfolio/quickinvoice.jpg" class="img-responsive" alt="">
+                    <a href="https://faktura.is" class="portfolio-box">
+                        <img src="static/img/portfolio/faktura3.png" class="img-responsive" alt="Faktura.is - quickinvoice">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -199,8 +231,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="http://endurskodun.johannsson.co" class="portfolio-box">
-                        <img src="img/portfolio/endurskodun2.png" class="img-responsive" alt="">
+                    <a href="https://endurskodun.johannsson.co" class="portfolio-box">
+                        <img src="static/img/portfolio/endurskodun2.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -214,8 +246,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6" style="background-color:#fff;">
-                    <a href="http://wokon.is" class="portfolio-box">
-                        <img src="img/portfolio/wokon.png" class="img-responsive" alt="">
+                    <a href="https://wokon.is" class="portfolio-box">
+                        <img src="static/img/portfolio/wokon.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -232,15 +264,15 @@
         </div>
     </section>
 
-<!--
+
     <aside class="bg-dark">
         <a href="#about" class="btn btn-primary btn-xl page-scroll">Services</a>
     </aside>
--->
+
     <section id="skills">
         <div class="container">
             <div class="row">
-                
+
             </div>
         </div>
     </section>
@@ -250,19 +282,19 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading"><i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i></h2>
                     <hr class="primary">
-                    
+
                     <p><a href="mailto:olafur@johannsson.co">olafur@johannsson.co</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/creative.js"></script>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.easing.min.js"></script>
+    <script src="static/js/jquery.fittext.js"></script>
+    <script src="static/js/wow.min.js"></script>
+    <script src="static/js/creative.js"></script>
 </body>
 
 </html>
