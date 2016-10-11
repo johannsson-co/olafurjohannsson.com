@@ -40,7 +40,11 @@
         <div class="header-content" style="margin-top: 68px;">
             <div class="header-content-inner">
                 
-                <h2><span class="emphasize">Hi,<br> </span> I'm Ólafur Aron</h2>
+                <h2><span class="emphasize">Hi,
+                	{% if user %}
+                		{{ user }}
+            		{% endif %}
+                <br> </span> I'm Ólafur Aron</h2>
                 <hr>
                 <h3 class="title">Developer</h3>
             </div>

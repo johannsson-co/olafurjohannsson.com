@@ -9,7 +9,7 @@
     <meta name="description" content="Developer, Programmer, Engineer, Software development, development, web, web development">
     <meta name="author" content="Ólafur Aron Jóhannsson, olafurj, Ólafur Jóhannsson, olafur@johannsson.co, olafurjohannsson">
 
-    <title>olafurjohannsson.com</title>
+    <title>{{ title }}</title>
 
     <!-- Bootstrap Core CSS -->
 
@@ -70,6 +70,16 @@
 </head>
 
 <body id="page-top">
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
     {% block body %}{% endblock %}
     <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
