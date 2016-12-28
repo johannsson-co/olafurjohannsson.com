@@ -3,21 +3,24 @@
 {% block body %}
 <h1>Login</h1>
 <form action="" method="post" name="login">
-	{{ form.hidden_tag() }}
+	
 	<p>
 		Username: <br>
-		<input type="text" placeholder="Enter username..." id="username" name="username"/>
+		<input type="text" placeholder="Enter username..." id="username" name="username" value="{{request.form.username}}"/>
 		<br>
 		Password: <br>
-		<input type="text" placeholder="Enter password..." id="password" name="password"/>
-	      {% for error in form.errors %}
-	        <span style="color: red;">[{{ error }}]</span>
-	      {% endfor %}<br>
-
+		<input type="text" placeholder="Enter password..." id="password" name="password" value="{{request.form.password}}"/>
+	    
 	</p>
-	<p>{{ form.remember_me }} Remember Me</p>
-	<p><input type="submit" value="Sign In"></p>
+	
+	<p>
+		<input class="btn btn-default" type="submit" value="Login">
+	</p>
 </form>
+
+{% if error %}
+	<p class="error"><strong>Error:</strong> {{error}}
+{% endif %}
 
 
 

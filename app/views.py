@@ -1,7 +1,7 @@
-from flask import render_template, flash, redirect
+from flask import render_template, flash, redirect, request, session, url_for
 from app import app
-from .forms import LoginForm
 
+print(dir(app))
 @app.route('/')
 @app.route('/index')
 def index():
@@ -11,11 +11,20 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        return redirect('/index')
-    
-    return render_template('login.html',
-                           title='Login',
-                           form=form)
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin':
+            error = 'Invalid username'
+        elif request.form['password'] != 'admin':
+            error = 'Invalid password'
+        else:
+            session['logged_in'] = True
+            flash('You were logged in')
+            return redirect(url_for('index'))
+    return render_template('login.html', error=error)
+
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
 
