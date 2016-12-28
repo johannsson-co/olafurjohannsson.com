@@ -1,18 +1,24 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1>Sign In</h1>
+<h1>Login</h1>
 <form action="" method="post" name="login">
 	{{ form.hidden_tag() }}
 	<p>
-		Enter OpenID: <br>
-		{{ form.openid(size=80) }}
-	      {% for error in form.openid.errors %}
+		Username: <br>
+		<input type="text" placeholder="Enter username..." id="username" name="username"/>
+		<br>
+		Password: <br>
+		<input type="text" placeholder="Enter password..." id="password" name="password"/>
+	      {% for error in form.errors %}
 	        <span style="color: red;">[{{ error }}]</span>
 	      {% endfor %}<br>
 
 	</p>
 	<p>{{ form.remember_me }} Remember Me</p>
-	<p><input type="submit" value="Sign In"</p>
+	<p><input type="submit" value="Sign In"></p>
 </form>
+
+
+
 {% endblock %}
