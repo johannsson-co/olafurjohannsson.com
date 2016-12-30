@@ -74,7 +74,9 @@
 </head>
 
 <body id="page-top">
-
+	{% if logged_in %}
+		You are logged in {{user}}
+	{%endif %}
 	{% with messages = get_flashed_messages() %}
 		{% if messages %}
 			<ul>

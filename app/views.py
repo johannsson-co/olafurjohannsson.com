@@ -1,12 +1,12 @@
 from flask import render_template, flash, redirect, request, session, url_for
 from app import app
 
-print(dir(app))
 @app.route('/')
 @app.route('/index')
 def index():
    return render_template('index.html',
-                          title='olafurjohannsson.com')
+                          title='olafurjohannsson.com',
+                          logged_in=session['logged_in'])
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -27,4 +27,5 @@ def login():
 @app.route('/blog')
 def blog():
     return render_template('blog.html')
+
 
